@@ -90,7 +90,7 @@ Wf.Effects = {
 
 Wf.Filter = function(options){
 	var self = this;
-  this.original_form_action = null;
+  this.original_form_action = "";
 }
 
 Wf.Filter.prototype = {
@@ -189,7 +189,7 @@ Wf.Filter.prototype = {
     });
 	},
 	submit: function() {
-    if (this.original_form_action != "") 
+    if (this.original_form_action != "")
         Wf.element('wf_form').action = this.original_form_action;
 		
     Wf.element('wf_submitted').value = 'true';
